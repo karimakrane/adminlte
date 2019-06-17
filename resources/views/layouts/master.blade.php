@@ -82,8 +82,8 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <router-link to="/dashboard" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+            <router-link to="/dashboard" class="nav-link" >
+              <i class="nav-icon fas fa-tachometer-alt blue"></i>
               <p>
                 Dashboard
                </p>
@@ -94,7 +94,7 @@
 
           <li class="nav-item has-treeview ">
             <a href="#" class="nav-link ">
-              <i class="nav-icon fas fa-cogs"></i>
+              <i class="nav-icon fas fa-cogs green"></i>
               <p>
                 Management
                 <i class="right fa fa-angle-left"></i>
@@ -107,17 +107,12 @@
                   <p>Users</p>
                 </router-link >
               </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Inactive Page</p>
-                </a>
-              </li>
+              
             </ul>
           </li>
           <li class="nav-item">
             <router-link to="/profile" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
+              <i class="nav-icon fas fa-user orange"></i>
               <p>
                 Profile
                </p>
