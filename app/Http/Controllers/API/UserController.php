@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -16,7 +17,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+
+        return User::latest()->paginate(10);
     }
 
     /**
@@ -34,8 +36,7 @@ class UserController extends Controller
             'role'     => 'required',
 
         ]);
-        if($request['photo'] == "")
-             $request['photo'] = null;
+        
         return User::create([
             'name' => $request['name'],
             'email' => $request['email'],
@@ -76,6 +77,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::findOrFail($id);
+        $user->delete();
+        return["message"=>"Utilisateur supprimer avec succes"];
     }
 }
